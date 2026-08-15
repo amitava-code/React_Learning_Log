@@ -1,23 +1,51 @@
-import React from 'react'
-import Contact from './Contact'
-
-import abcd, {one , two} from './test'
+import React, { useState } from 'react'
 
 const App = () => {
 
-  abcd()
+  let [count, setCount]  = useState(0)
 
-  one()
+  console.log(count)
 
-  two()
+  let [Flag, setFlag] = useState(true)
 
-
-
+  console.log(Flag)
 
   return (
     <div>
-      <h1>hi guys</h1>
-      {Contact()}
+      <h1>Count is - {count} </h1>
+
+      
+      <button
+
+      onClick={()=>{
+
+        setCount(count+1)
+
+      }}
+
+
+  
+
+
+
+      >
+
+        increment 
+      </button>
+
+
+      <button
+
+      onClick={()=>{
+        setFlag(false)
+      }}
+      
+      >
+        boolean
+      </button>
+
+
+    
     </div>
   )
 }
